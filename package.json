@@ -1,0 +1,21 @@
+{
+  "name": "desktop-pet",
+  "version": "0.1.0",
+  "description": "Posture & petting desktop pet",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "setup": "node scripts/setup-mediapipe.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "electron": "^45.3.2",
+    "electron-vite": "^6.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^1.2.3"
+  }
+}
