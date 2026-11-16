@@ -104,6 +104,10 @@ scripts/setup-mediapipe.mjs   # 모델·wasm 준비 스크립트
 
 `main.ts`의 `DEBUG_SHOW_ZONE`을 `false`로 바꾸면 분홍 점선 박스가 사라집니다.
 
+## 힐링 동작 (팀 프로젝트 기여분)
+
+팀 프로젝트(ChiiPT)에서 맡은 쓰다듬기 반응 연출(부비부비 → 웃음 → 총총, 하트)은 [`healing-motions/`](healing-motions/README.md)에 정리했습니다.
+
 ## 한계와 앞으로 할 일
 
 - [ ] 전용 happy 그림(눈 감고 웃는 표정)으로 교체: 지금은 CSS 흔들기와 하트로 대체

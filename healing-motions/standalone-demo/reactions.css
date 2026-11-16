@@ -1,0 +1,13 @@
+#fx { position: absolute; inset: 0; pointer-events: none; }
+#character { display: block; margin: 0 auto; padding: 0; width: 192px; border: 0; background: none; cursor: pointer; pointer-events: auto; transform-origin: 50% 100%; }
+#character.rub { animation: pet-rub 700ms ease-in-out infinite alternate; }
+@keyframes pet-rub { from { transform: translateX(-9px) rotate(-5deg) scale(1.03, 0.97); } to { transform: translateX(9px) rotate(5deg) scale(1.03, 0.97); } }
+#character.laugh { animation: pet-laugh 160ms ease-in-out infinite alternate; }
+@keyframes pet-laugh { from { transform: translateY(0) scale(1.06, 0.95) rotate(-1.5deg); } to { transform: translateY(-5px) scale(1.04, 0.98) rotate(1.5deg); } }
+#character.hop { animation: pet-hop 450ms ease-in-out 3; }
+@keyframes pet-hop { 0%, 100% { transform: translateY(0) scale(1.04, 0.94); } 50% { transform: translateY(-22px) scale(0.97, 1.05); } }
+#character.settle { animation: pet-settle 400ms ease-out; }
+@keyframes pet-settle { 0% { transform: scale(1.04, 0.95); } 40% { transform: scale(0.98, 1.03); } 70% { transform: scale(1.01, 0.99); } 100% { transform: none; } }
+.bubble { position: absolute; font-size: 22px; font-weight: 700; color: #e8689a; transform: translate(-50%, 0); animation: heart-up 1s ease-out forwards; pointer-events: none; text-shadow: 0 0 3px white, 0 0 5px white; }
+.heart { position: absolute; font-size: 26px; transform: translate(-50%, 0); animation: heart-up 1.3s ease-out forwards; pointer-events: none; }
+@keyframes heart-up { from { opacity: 1; transform: translate(-50%, 0) scale(0.6); } to { opacity: 0; transform: translate(-50%, -100px) scale(1.2); } }
