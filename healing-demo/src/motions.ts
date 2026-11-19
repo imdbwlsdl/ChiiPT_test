@@ -3,7 +3,7 @@
  * canvas.feet = 프레임 이미지 안에서 발바닥 기준선의 y 위치(px). 모든 동작에서 발바닥 중앙이 (w/2, feet)에 오도록 만들어 두었다.
  */
 export type MotionName =
-  | 'idle' | 'idle-closed' | 'walk' | 'walk-mirrored'
+  | 'idle-open' | 'idle-closed' | 'walk' | 'walk-mirrored'
   | 'stretch' | 'cheek-pull' | 'cheek-release' | 'sleep';
 
 export interface Motion {
@@ -15,7 +15,7 @@ export interface Motion {
 const STAND = { w: 256, h: 240, feet: 228 };
 
 export const MOTIONS: Record<MotionName, Motion> = {
-  idle: { frames: 6, fps: 8, canvas: STAND }, //              눈 뜬 대기 (GIF 120ms 간격)
+  'idle-open': { frames: 6, fps: 8, canvas: STAND }, //              눈 뜬 대기 (GIF 120ms 간격)
   'idle-closed': { frames: 10, fps: 8, canvas: STAND }, //    눈 감은 대기: 쓰다듬는 동안 사용
   walk: { frames: 14, fps: 16, canvas: STAND }, //            제자리 걷기 (GIF 60ms 간격)
   'walk-mirrored': { frames: 14, fps: 16, canvas: STAND }, // 좌우 반전

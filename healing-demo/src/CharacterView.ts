@@ -7,7 +7,7 @@ import { framePath, MOTIONS, type MotionName } from './motions.ts';
 export class CharacterView {
   x = 0;
   y = 0;
-  motion: MotionName = 'idle';
+  motion: MotionName = 'idle-open';
   private frame = 0;
   private acc = 0;
   private loop = true;
