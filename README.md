@@ -110,6 +110,7 @@ scripts/setup-mediapipe.mjs   # 모델·wasm 준비 스크립트
 ## 힐링 동작 (팀 프로젝트 기여분)
 
 팀 프로젝트(ChiiPT)에서 맡은 쓰다듬기 반응 연출(부비부비 → 웃음 → 총총, 하트)은 [`healing-motions/`](healing-motions/README.md)에 정리했습니다.
+새 캐릭터 프레임 재생, 쓰다듬기 반응, 마우스를 따라 걷는 산책을 데모로 만든 기록은 [`healing-demo/`](healing-demo/README.md)에 있습니다.
 
 ## 한계와 앞으로 할 일
 
