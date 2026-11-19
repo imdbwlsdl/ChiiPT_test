@@ -2,7 +2,7 @@
  * 산책: 캐릭터가 마우스 커서를 따라 화면 어디든(좌우·상하·대각선) 걸어간다.
  * 커서에서 stopDistance 안쪽까지 오면 멈추고, 커서가 startDistance보다 멀어지면 다시 걷는다.
  * (두 값을 다르게 둔 이유: 경계에서 걷다 멈췄다를 반복하는 떨림을 막기 위한 히스테리시스)
- * 숫자는 모두 임시값. 직접 해 보면서 조절한다.
+ * 숫자는 모두 임시값. 직접 해 보면서 조절한다. (초당 픽셀 단위라서 화면 크기·컴퓨터 성능과 상관없이 같은 속도)
  */
 export const walkSettings = {
   stopDistance: 90, //  이 거리 안으로 들어오면 멈춤(px)
@@ -40,6 +40,7 @@ export class WalkController {
       // +1: 정확히 stop 거리에 도착한 뒤 소수점 오차 때문에 계속 "걷는 중"으로 남는 것을 막는다
       if (dist <= (this.moving ? stop + 1 : start)) {
         this.moving = false;
+        if (!this.enabled) { this.x = tx; this.y = ty; } // 산책을 끄고 돌아왔을 때는 원래 자리에 딱 맞춘다
       } else {
         this.moving = true;
         const speed = Math.min(s.maxSpeed, (dist - stop) * s.slowdown + s.minSpeed);
