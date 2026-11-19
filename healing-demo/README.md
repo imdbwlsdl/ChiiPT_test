@@ -21,7 +21,7 @@
 |---|---|
 | 쓰다듬기 반응 연출 (`PetReactions.ts`, `healing/index.ts` 11줄) | 팀원 동의를 받아 팀원 브랜치(PR #4)에 추가함 |
 | 새 캐릭터 프레임 (idle-open, idle-closed, stretch, cheek-pull, cheek-release, sleep) | 같은 PR에 추가함 |
-| 산책 (`WalkController.ts`, `CharacterView.ts`) | **아직 반영 안 함.** 팀장님 렌더러와 위치를 어떻게 주고받을지 팀과 정한 뒤 반영 예정 |
+| 산책 (팀 구조 버전: `team-structure-walk/`) | 팀 저장소의 `feature/healing` 브랜치에 올림. 힐링 파트 안에서만 구현하고 공용 파일은 2군데(명령 타입 1줄, 메뉴 항목 1개)만 수정. 자세 반응과의 우선순위, 렌더러 연결 방식은 팀 논의 후 정함 |
 
 ## 파일 (`src/`)
 | 파일 | 역할 |
@@ -30,6 +30,7 @@
 | `CharacterView.ts` | 프레임 재생, 위치(발바닥 중앙 좌표), 클릭 영역(몸 위 타원) |
 | `WalkController.ts` | 산책 이동 계산. 커서를 따라가고, 멈추는 거리/속도 등 숫자를 맨 위에서 조절 |
 | `PetReactions.ts` | 쓰다듬는 동안의 반응 연출 (유예·이어하기·출렁 복귀 포함) |
+| `team-structure-walk/` | 팀 구조(`features/healing/walk/`)에 맞춘 산책 버전. 이동 계산 + `#character` 를 읽기 전용으로 옮기는 화면 연결 + 테스트 10개 |
 
 `frames-README.md`는 프레임 규격 설명입니다. 서 있는 몸 높이는 약 150px, 발바닥 기준선은 동작마다 통일했고, 배경과 그림자는 제거했습니다(그림자는 렌더러가 직접 그림).
 
