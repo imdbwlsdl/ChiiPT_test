@@ -109,13 +109,14 @@ scripts/setup-mediapipe.mjs   # 모델·wasm 준비 스크립트
 
 ## 힐링 동작 (팀 프로젝트 기여분)
 
-팀 프로젝트(ChiiPT)에서 맡은 쓰다듬기 반응 연출(부비부비 → 웃음 → 총총, 하트)은 [`healing-motions/`](healing-motions/README.md)에 정리했습니다.
-새 캐릭터 프레임 재생, 쓰다듬기 반응, 마우스를 따라 걷는 산책을 데모로 만든 기록은 [`healing-demo/`](healing-demo/README.md)에 있습니다.
+팀 프로젝트(ChiiPT)에서 맡은 쓰다듬기 반응 연출(부비부비 → 웃음 → 총총, 하트)은 [`healing-motions/`](healing-motions/README.md)에 정리했습니다. 이 연출과 새 캐릭터 프레임은 팀원 동의를 받아 팀 PR(#4)에 반영했습니다.
+새 캐릭터 프레임 재생, 쓰다듬기 반응, 마우스를 따라 걷는 산책(끄면 화면 아래 가운데로 복귀)을 데모로 만든 기록은 [`healing-demo/`](healing-demo/README.md)에 있습니다.
 
 ## 한계와 앞으로 할 일
 
 - [ ] 전용 happy 그림(눈 감고 웃는 표정)으로 교체: 지금은 CSS 흔들기와 하트로 대체
-- [ ] 팀 저장소 구조(`features/healing/`)로 이식: 공용 카메라의 `start(stream)` / `stop()` 규칙에 맞추고, 캐릭터 반응은 `CharacterController`에 결과만 전달
+- [x] 쓰다듬기 반응 연출은 팀 저장소 구조(`features/healing/`)에 맞춰 팀 PR(#4)에 반영함
+- [ ] 산책은 팀장님 렌더러와 위치를 어떻게 주고받을지 팀과 정한 뒤 팀 구조에 반영
 - [ ] 전체화면 오버레이 방식을 팀과 합의
 - [ ] 단위 테스트 추가 (지금은 임시 시뮬레이션으로만 검증)
 - [ ] Windows에서 동작 확인 (지금은 macOS에서만 개발·실행)
