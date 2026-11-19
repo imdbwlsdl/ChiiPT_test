@@ -7,9 +7,9 @@
 export const walkSettings = {
   stopDistance: 90, //  이 거리 안으로 들어오면 멈춤(px)
   startDistance: 120, // 이 거리보다 멀어지면 다시 걷기 시작(px)
-  maxSpeed: 800, //     최대 속도(px/초)
-  minSpeed: 140, //     거의 다 와서도 이 속도 밑으로는 느려지지 않음
-  slowdown: 6, //       멀수록 빨라지는 정도
+  maxSpeed: 610, //     최대 속도(px/초)  (처음 420 ↔ 빠르게 800 의 중간)
+  minSpeed: 105, //     거의 다 와서도 이 속도 밑으로는 느려지지 않음 (70 ↔ 140 의 중간)
+  slowdown: 4.5, //     멀수록 빨라지는 정도 (3 ↔ 6 의 중간)
   headroom: 175, //     발바닥이 화면 위쪽에서 이만큼은 내려와 있어야 몸이 안 잘림
   margin: 70 //         좌우 여유
 };
